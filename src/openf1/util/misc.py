@@ -16,7 +16,6 @@ def join_url(*args) -> str:
         raise ValueError(f"Invalid URL components: {args}")
     return "/".join([e.strip("/") for e in args])
 
-
 def timed_cache(expiration_time: float) -> Callable:
     """A decorator to cache the function output for a given duration.
     `expiration_time` is in seconds.
